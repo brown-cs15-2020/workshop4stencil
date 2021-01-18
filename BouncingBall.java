@@ -1,7 +1,5 @@
-package bouncingBallStencil;
+package workshop4stencil;
 
-import bouncingBall.Ball;
-import bouncingBall.Constants;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -17,7 +15,7 @@ import javafx.util.Duration;
  * Top-level logical class of our program, contains timeline of bouncing ball.
  */
 public class BouncingBall {
-    private bouncingBall.Ball _ball;
+    private Ball _ball;
     private Pane _demoPane;
 
     public BouncingBall(Pane demoPane) {

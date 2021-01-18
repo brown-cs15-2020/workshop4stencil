@@ -1,6 +1,5 @@
-package bouncingBallStencil;
+package workshop4stencil;
 
-import bouncingBall.BouncingBall;
 import javafx.scene.layout.Pane;
 
 /**

@@ -1,4 +1,4 @@
-package bouncingBallStencil;
+package workshop4stencil;
 
 /**
  * Constants class for bouncing ball demo
