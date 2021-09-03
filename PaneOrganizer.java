@@ -6,15 +6,15 @@ import javafx.scene.layout.Pane;
  * Organizes GUI layout for bouncing ball.
  */
 public class PaneOrganizer {
-    private Pane _root;
+    private Pane root;
 
     public PaneOrganizer() {
-        _root = new Pane();
-        new BouncingBall(_root);
+        this.root = new Pane();
+        new BouncingBall(this.root);
     }
 
     public Pane getRoot() {
-        return _root;
+        return this.root;
     }
 }
 

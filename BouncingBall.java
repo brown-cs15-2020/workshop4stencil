@@ -9,45 +9,36 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import workshop4solution.Constants;
 
 /**
  * FILL IN THIS CLASS FOR DEMO
  * Top-level logical class of our program, contains timeline of bouncing ball.
  */
 public class BouncingBall {
-    private Ball _ball;
-    private Pane _demoPane;
+    private Ball ball;
+    private Pane demoPane;
 
     public BouncingBall(Pane demoPane) {
-        _demoPane = demoPane;
+        this.demoPane = demoPane;
         // TODO: create a rectangle for the ground
-        _ball = new Ball(demoPane);
+        this.ball = new Ball(demoPane);
         this.setUpTimeline();
     }
 
     private void setUpTimeline() {
-        KeyFrame kf = new KeyFrame(Duration.seconds(Constants.DURATION), new DemoHandler());
+        KeyFrame kf = new KeyFrame(Duration.seconds(Constants.DURATION), (ActionEvent e) ->this.updateBall());
         Timeline timeline = new Timeline(kf);
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
 
-    private class DemoHandler implements EventHandler<ActionEvent> {
-        private double _velocity;
-        public DemoHandler() {
-            _velocity = 10;
-        }
+    private void updateBall(){
+        // TODO: the ball should set its own position and velocity
 
-        @Override
-        public void handle(ActionEvent event) {
-            this.updateBall();
-        }
-
-        private void updateBall() {
-            //TODO implement bounce simulation algorithm
-
-        }
     }
+
+
 
 
 }

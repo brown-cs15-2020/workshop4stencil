@@ -8,25 +8,25 @@ import javafx.scene.shape.Circle;
  */
 public class Ball {
 
-    private Circle _ball;
+    private Circle ball;
 
     public Ball(Pane pane) {
-        _ball = new Circle();
-        _ball.setRadius(Constants.BALL_RADIUS);
-        _ball.setCenterX(Constants.SCENE_WIDTH / 2);
-        _ball.setCenterY(Constants.BALL_START_Y);
-        pane.getChildren().addAll(_ball);
+        this.ball = new Circle();
+        this.ball.setRadius(Constants.BALL_RADIUS);
+        this.ball.setCenterX(Constants.SCENE_WIDTH / 2);
+        this.ball.setCenterY(Constants.BALL_START_Y);
+        pane.getChildren().addAll(this.ball);
     }
 
     public Circle getBall() {
-        return _ball;
+        return this.ball;
     }
 
     public void setYLocation(double y) {
-        _ball.setCenterY(y);
+        this.ball.setCenterY(y);
     }
 
     public double getYLocation() {
-        return _ball.getCenterY();
+        return this.ball.getCenterY();
     }
 }
